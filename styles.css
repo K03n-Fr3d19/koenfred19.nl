@@ -1,0 +1,639 @@
+/* Global Styles */
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Spacers and other "tools"*/
+.spacer {
+    width: 100%;  /* Full width by default */
+    height: 20px; /* Default vertical spacing */
+}
+
+.spacer.small {
+    height: 10px;
+}
+
+/* Fullscreen, full-width adaptive container */
+.container {
+    width: 100%;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header & Navigation */
+.site-header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #1e1b2d, #6d44a6);
+    border-radius: 12px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    color: #ffffff;
+}
+
+/* Navbar */
+.site-nav {
+    margin-top: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px;
+}
+
+.navbar li {
+    position: relative;
+}
+
+.navbar li a {
+    position: relative;
+    color: #c1b6ce; /* Purple accent */
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: #7e4ef8;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.navbar li a:hover {
+    background-color: rgba(155, 89, 182, 0.2); /* Subtle hover box */
+    color: #7e4ef8; /* Lighter purple on hover */
+}
+
+.navbar li a:hover::after {
+    width: 100%;
+}
+
+/* Statistics Section */
+.stats-section {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.stats-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.stats-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    text-decoration: none;
+    color: inherit;
+    background: linear-gradient(145deg, #1a1a1a, #242424);
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.stat-card-wide {
+    background: linear-gradient(145deg, #1a1a1a, #242424);
+    padding: 20px;
+    border-radius: 10px;
+    width: 460px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.stat-card-wide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.stat-card h3 {
+    text-decoration: none;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #7e4ef8;
+}
+.stat-card-wide h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #7e4ef8;
+}
+
+.stat-card p {
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+.stat-card-sub-text {
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 0;
+    font-weight: italic;
+}
+
+/* Subscription Percentage Bar */
+.sub-percentage {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sub-bar-container {
+    width: 100%;
+    max-width: 400px; /* Adjust size */
+    height: 30px;
+    background-color: #444;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px auto;
+    border: 2px solid #7e4ef8; /* Purple outline */
+}
+
+.sub-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #7e4ef8, #7e4ef8);
+}
+
+
+/* Video Section */
+.video-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically if needed */
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 800px; /* Adjust for desired max width */
+    margin: 0 auto; /* Centers the block */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 450px; /* Adjust height as needed */
+    display: block; /* Prevents extra spacing */
+    border: none;
+}
+
+.video-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+
+/* Other Videos Section */
+.videos-list-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.videos-list-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.video-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.video-card {
+    background: linear-gradient(145deg, #1a1a1a, #242424);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card iframe {
+    width: 100%; /* Full width inside the container */
+    height: 180px; /* Adjust height */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: shadow effect */
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.video-card a {
+    color: #9b59b6; /* Purple accent */
+    font-size: 1.1em;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.video-card a:hover {
+    color: #bf55ec;
+    text-decoration: underline;
+}
+
+/* Software Section */
+.software-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.software-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual Software Card */
+.software-card {
+    display: grid;
+    grid-template-columns: 80px auto; /* Image on the left, text on the right */
+    gap: 15px;
+    align-items: center;
+    background-color: #242424;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.software-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Software Image */
+.software-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Software Info */
+.software-info h3 {
+    margin: 0;
+    color: #9b59b6; /* Purple Accent */
+    font-size: 1.2em;
+}
+
+.software-info p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #e0e0e0;
+}
+
+/* PC Specs Grid */
+.pc-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Limit the max width */
+    margin: 0 auto; /* Center the grid horizontally */
+}
+
+/* Hardware Grid */
+.hardware-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Limit the max width */
+    margin: 0 auto; /* Center the grid horizontally */
+}
+
+/* Card Styling */
+.pc-spec-card, .hardware-card {
+    background-color: #242424;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pc-spec-card:hover, .hardware-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.pc-spec-card h3, .hardware-card h3 {
+    font-size: 1.5em;
+    color: #9b59b6; /* Purple accent */
+    margin-bottom: 10px;
+}
+
+.pc-spec-card p, .hardware-card p {
+    color: #e0e0e0;
+    font-size: 1.2em;
+}
+
+/* Image Styling for Hardware Cards */
+.hardware-card img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+/* Discord iFrame */
+.discord-card {
+    background: linear-gradient(145deg, #1a1a1a, #242424);
+    padding: 20px;
+    border-radius: 10px;
+    width: 390px;
+    height: 500;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.discord-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #1e1b2d, #6d44a6);
+    border-radius: 12px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.site-footer h1 {
+    margin: 0;
+    font-size: 2.8em;
+    color: #ffffff;
+}
+
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #1e1b2d, #6d44a6);
+    border-radius: 12px;
+    margin-top: 0;
+    width: 100%;
+}
+
+.site-footer h1 {
+    margin: 0;
+    font-size: 2.8em;
+    color: #ffffff;
+}
+
+/* Footer Navbar */
+.footer-nav {
+    margin-top: 20px;
+}
+
+.footer-nav .navbar {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 25px;
+}
+
+.footer-nav .navbar li {
+    position: relative;
+}
+
+.footer-nav .navbar li a {
+    position: relative;
+    color: #c1b6ce; /* Purple accent */
+    font-weight: bold;
+    font-size: 1.1em;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-nav .navbar li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: #7e4ef8;
+    transition: width 0.3s ease;
+    border-radius: 2px;
+}
+
+.footer-nav .navbar li a:hover {
+    background-color: rgba(155, 89, 182, 0.2); /* Subtle hover box */
+    color: #7e4ef8; /* Lighter purple on hover */
+}
+
+.footer-nav .navbar li a:hover::after {
+    width: 100%;
+}
+
+/* Scroll to top button in footer */
+.scroll-to-top-footer {
+    display: inline-block;
+    background-color: #6d44a6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top-footer:hover {
+    background-color: #4b2c7c;
+}
+
+.scroll-to-top-footer:active {
+    background-color: #3a1f5e;
+}
+
+/* Badge Section */
+.cert-badges {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Badge Styles */
+.badge {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #6d44a6;
+    border: 2px solid #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.badge.http3 {
+    background-color: #34b7f1; /* HTTP/3 color */
+    border-color: #fff;
+}
+
+.badge.p384 {
+    background-color: #d178f2; /* P384 color */
+    border-color: #fff;
+}
+
+.badge.security-headers {
+    background-color: #4eb153; /* P384 color */
+    border-color: #fff;
+}
+
+.badge:hover {
+    background-color: #ffffff;
+    color: #6d44a6;
+}
+
+/* Tooltip Container */
+.cert-badges .badge {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Tooltip Text */
+.cert-badges .tooltip {
+    visibility: hidden;
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Positioning above the badge */
+    left: 50%;
+    margin-left: -125px; /* Centers the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    font-size: 0.9em;
+}
+
+/* Tooltip Arrow */
+.cert-badges .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* Show Tooltip on Hover */
+.cert-badges .badge:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 30px 15px;
+    }
+
+    .site-header h1 {
+        font-size: 2.2em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar li a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .stat-card,
+    .video-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .stats-cards,
+    .video-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
