@@ -183,6 +183,49 @@ html {
     font-weight: italic;
 }
 
+/* Make sure the stat-card is positioned relatively so the tooltip can be absolutely positioned */
+.stat-card, .stat-card-wide {
+    position: relative;
+}
+
+/* Tooltip styles for stat-cards */
+.stat-card .tooltip, .stat-card-wide .tooltip {
+    visibility: hidden;
+    opacity: 0;
+    width: 300px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in-out;
+    font-size: 0.9em;
+}
+
+/* Tooltip arrow */
+.stat-card .tooltip::after, .stat-card-wide .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+/* Show tooltip when hovering over the stat-card */
+.stat-card:hover .tooltip, .stat-card-wide:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 /* Subscription Percentage Bar */
 .sub-percentage {
     text-align: center;
