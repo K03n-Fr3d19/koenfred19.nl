@@ -9,6 +9,7 @@ The "koenfred19.nl" website is a simple HTML and CSS-based project designed to s
 - **Privacy-Focused**: No cookies, tracking, or data collection is involved in the functioning of the website.
 - **Static Content**: The website primarily contains static information about my YouTube channel and related links.
 - **No JavaScript**: A lightweight, secure experience with no JavaScript, reducing potential security risks.
+- **Custom Error Pages**: the folder `/errp/` contains 4 custom error pages that you can set (manualy) in Nginx or Apache.
 
 ### Anti-features
 
@@ -21,6 +22,7 @@ This website is composed of:
 - **index.html**: The main landing page containing all the essential information.
 - **style.css**: The CSS file responsible for styling the website.
 - **/img/**: Folder containing images.
+- **/errp/**: Folder with custom error pages.
 
 ## Comment
 This is just an simple website I made for my Youtube channel, noting special.
