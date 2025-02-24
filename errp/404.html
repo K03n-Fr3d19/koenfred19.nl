@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        /* Global Styles */
+        * {
+            text-decoration: none;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        /* Spacers and other "tools"*/
+        .spacer {
+            width: 100%;  /* Full width by default */
+            height: 20px; /* Default vertical spacing */
+        }
+
+        .spacer.small {
+            height: 10px;
+        }
+
+        /* Fullscreen, full-width adaptive container */
+        .container {
+            width: 100%;
+            padding: 12%;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header & Navigation */
+        .site-header {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #1e1b2d, #6d44a6);
+            border-radius: 12px;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .site-header h1 {
+            margin: 0;
+            font-size: 6.8em;
+            color: #ffffff;
+        }
+        
+        .site-header h2 {
+            margin: 0;
+            font-size: 3.8em;
+            color: #bbb9b9;
+        }
+
+        /* Navbar */
+        .site-nav {
+            margin-top: 20px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 25px;
+        }
+
+        .navbar li {
+            position: relative;
+        }
+
+        .navbar li a {
+            position: relative;
+            color: #c1b6ce; /* Purple accent */
+            font-weight: bold;
+            font-size: 1.1em;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .navbar li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 0;
+            background: #7e4ef8;
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .navbar li a:hover {
+            background-color: rgba(155, 89, 182, 0.2); /* Subtle hover box */
+            color: #7e4ef8; /* Lighter purple on hover */
+        }
+
+        .navbar li a:hover::after {
+            width: 100%;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .site-header {
+                padding: 30px 15px;
+            }
+
+            .site-header h1 {
+                font-size: 2.2em;
+            }
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar li a {
+                display: block;
+                text-align: center;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <header class="site-header">
+        <h1>404</h1>
+        <h2>Deze pagina bestaat niet</h2>
+        <!-- Navigation Bar -->
+        <nav class="site-nav">
+          <ul class="navbar">
+            <li><a href="https://koenfred19.nl" rel="noopener noreferrer">Terug naar het begin</a></li>
+
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </body>
+</html>
