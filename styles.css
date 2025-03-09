@@ -581,17 +581,17 @@ html {
 }
 
 .badge.http3 {
-    background-color: #34b7f1; /* HTTP/3 color */
+    background-color: #1790c4; /* HTTP/3 color */
     border-color: #fff;
 }
 
 .badge.p384 {
-    background-color: #d178f2; /* P384 color */
+    background-color: #a034c7; /* P384 color */
     border-color: #fff;
 }
 
 .badge.security-headers {
-    background-color: #4eb153; /* P384 color */
+    background-color: #2a9230; /* P384 color */
     border-color: #fff;
 }
 
